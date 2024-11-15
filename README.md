@@ -168,6 +168,33 @@ URL: DELETE /api/schedules/{id}
 ```
 ![schedule_jpa_erd.jpg](schedule_jpa_erd.jpg)
 
+SQL
+
+CREATE TABLE user
+(
+    id            BiGINT AUTO_INCREMENT PRIMARY KEY,
+    username      VARCHAR(50)  NOT NULL,
+    email         VARCHAR(100) NOT NULL UNIQUE,
+    password      VARCHAR(100) NOT NULL,
+    created_date  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE schedule
+(
+    id            BiGINT AUTO_INCREMENT PRIMARY KEY,
+    title         VARCHAR(100) NOT NULL,
+    content       TEXT,
+    user_id       BIGINT,
+    created_date  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES user (id)
+);
+
+
+
+
+
 <주요 구현 요약>
 엔티티 생성: @Entity를 사용해 User와 Schedule 엔티티를 정의하고, 필요한 필드와 관계를 설정 및 JPA Auditing 설정합니다.
 리포지토리 인터페이스: 각 엔티티에 대해 JpaRepository를 상속하는 인터페이스를 생성합니다.
