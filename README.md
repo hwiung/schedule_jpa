@@ -168,7 +168,9 @@ URL: DELETE /api/schedules/{id}
 ```
 ![schedule_jpa_erd.jpg](schedule_jpa_erd.jpg)
 
-SQL
+
+
+schedules.sql
 
 CREATE TABLE user
 (
