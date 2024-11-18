@@ -4,7 +4,7 @@
 
 URL: POST /api/users
 
-설명: 새로운 유저를 생성하고 회원가입을 완료합니다.
+설명: 새로운 유저를 생성하고 회원가입을 완료합니다(이때, 비밀번호는 최소 6자리 이상 돼야 합니다).
     
 요청 본문:
 ```json
@@ -166,9 +166,7 @@ URL: DELETE /api/schedules/{id}
   "message": "일정을 찾을 수 없습니다."
 }
 ```
-![schedule_jpa_erd.jpg](schedule_jpa_erd.jpg)
-
-
+![scheduleJPA.jpg](scheduleJPA.jpg)
 
 schedules.sql
 
