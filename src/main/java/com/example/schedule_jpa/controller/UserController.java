@@ -42,7 +42,7 @@ public class UserController {
                                                 // 요청 JSON 데이터를 LoginRequestDto로 매핑.
         User loginedUser = userService.loginUser(loginRequestDto);  // 로그인 검증 로직 수행.
         HttpSession session = request.getSession(); // 세션을 가져오거나, 없으면 새로 생성.
-        session.setAttribute("SESSION KEY", loginedUser.getId());   // 로그인 구현 -> 세션 쿠키 방식
+        session.setAttribute("SESSION_KEY", loginedUser.getId());   // 로그인 구현 -> 세션 쿠키 방식
 
         return ResponseEntity.ok().body("로그인됐습니다.");
     }
@@ -56,4 +56,3 @@ public class UserController {
         return ResponseEntity.ok("로그아웃 성공");
     }
 }
-

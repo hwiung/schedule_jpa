@@ -32,4 +32,3 @@ public class Schedule extends BaseEntity{       // BaseEntity 클래스를 상�
         this.content = content;
     }
 }
-

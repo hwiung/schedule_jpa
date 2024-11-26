@@ -12,4 +12,3 @@ public class LoginRequestDto {          // 사용자 로그인 요청을 처리�
         this.password = password;                               // 생성자 매개변수 password 값을 현재 객체의 password 필드에 할당.
     }
 }
-

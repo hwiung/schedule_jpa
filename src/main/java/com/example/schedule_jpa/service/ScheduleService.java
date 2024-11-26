@@ -64,4 +64,3 @@ public class ScheduleService {
         return ScheduleResponseDto.toDto(schedule);     // 업데이트된 스케줄을 DTO로 변환하여 반환
     }
 }
-

@@ -19,4 +19,3 @@ public abstract class BaseEntity {  // 하위 클래스에서 상속받아 사�
     @LastModifiedDate
     private LocalDateTime modifiedAt;
 }
-

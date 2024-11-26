@@ -19,4 +19,3 @@ public class WebConfig {
         return filterRegistrationBean;  // 설정된 FilterRegistrationBean 객체를 반환하여 스프링 컨테이너에 등록함.
     }
 }
-

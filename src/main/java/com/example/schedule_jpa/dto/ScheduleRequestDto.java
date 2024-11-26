@@ -15,4 +15,3 @@ public class ScheduleRequestDto {               // 일정 생성 또는 업데�
         this.content = content;                                                     // 매개변수 content 값을 현재 객체의 content 필드에 할당.
     }
 }
-

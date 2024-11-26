@@ -36,4 +36,3 @@ public class ScheduleResponseDto {                // 일정 데이터를 클라�
         );
     }
 }
-

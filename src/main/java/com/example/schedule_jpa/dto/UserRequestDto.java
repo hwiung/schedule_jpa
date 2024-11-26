@@ -23,4 +23,3 @@ public class UserRequestDto {       // 클라이언트로부터 사용자 생성
         );
     }
 }
-

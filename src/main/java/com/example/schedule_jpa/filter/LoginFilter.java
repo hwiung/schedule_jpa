@@ -10,7 +10,7 @@ import java.io.IOException;
 
 @Slf4j      // log.info(), log.debug() 등을 사용하여 로그 기록 가능.
 public class LoginFilter implements Filter {        // 로그인 여부를 검증하는 역할 수행.
-    private static final String[] WHITE_LIST = {"/users*", "/users/login", "/user/logout", "/schedules*"};  // 화이트 리스트 예외 -> 화이트 리스트에 포함된 url은 필터 로직을 생략(예외 처리)함.
+    private static final String[] WHITE_LIST = {"/users", "/users/login"};  // 화이트 리스트 예외 -> 화이트 리스트에 포함된 url은 필터 로직을 생략(예외 처리)함.
     @Override
     // 로그인 여부를 검증하고, 화이트리스트에 포함되지 않은 요청만 필터링 처리.
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -33,4 +33,3 @@ public class LoginFilter implements Filter {        // 로그인 여부를 검�
         return PatternMatchUtils.simpleMatch(WHITE_LIST, requestURI);  // 요청 URI와 화이트리스트의 패턴을 비교.
     }
 }
-

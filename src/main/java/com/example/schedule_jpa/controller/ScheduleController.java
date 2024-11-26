@@ -47,4 +47,3 @@ public class ScheduleController {
         return ResponseEntity.ok().body(scheduleService.updateSchedule(id, updateRequestDto));  // 서비스 계층을 호출하여 해당 ID의 일정을 업데이트함.
     }
 }
-

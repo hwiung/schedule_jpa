@@ -34,4 +34,3 @@ public class UserResponseDto {  // 사용자 조회 결과를 클라이언트에
         );
     }
 }
-

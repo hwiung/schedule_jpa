@@ -13,4 +13,3 @@ public class ScheduleUpdateRequestDto {         // 클라이언트로부터 일�
         this.content = content;
     }
 }
-

@@ -27,8 +27,6 @@ public class ScheduleJpaApplication {
 
 
 
-
-
 // lv.1 일정 crud -> 저장, 조회, 수정, 삭제
     // api -> url -> url 정의 -> controller
     // service
