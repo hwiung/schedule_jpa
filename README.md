@@ -2,16 +2,16 @@
 
 1. 회원 가입
 
-URL: POST /api/users
+URL: POST /users
 
-설명: 새로운 유저를 생성하고 회원가입을 완료합니다(이때, 비밀번호는 최소 6자리 이상 돼야 합니다).
+설명: 새로운 유저를 생성하고 회원가입을 완료합니다.
     
 요청 본문:
 ```json
 {
-  "username": "string",
-  "email": "string",
-  "password": "string"
+  "userName": "String",
+  "email": "String",
+  "password": "String"
 }
 ```
 
@@ -21,8 +21,8 @@ URL: POST /api/users
 ```json
 {
   "id": "number",
-  "username": "string",
-  "email": "string",
+  "userName": "String",
+  "email": "String",
   "createdData": "yyyy-MM-dd'T'HH:mm:ss",
   "modifiedDate": "yyyy-MM-dd'T'HH:mm:ss"
 }
@@ -35,7 +35,7 @@ URL: POST /api/users
 ```
 2. 로그인
 
-URL: POST /api/login
+URL: POST /login
 
 설명: 유저 이메일과 비밀번호로 로그인합니다.
 
@@ -62,16 +62,16 @@ URL: POST /api/login
 ```
 3. 일정 생성
    
-URL: POST /api/schedules
+URL: POST /schedules
 
 설명: 새로운 일정을 생성합니다.
 
 요청 본문:
 ```json
 {
- "title": "string",
-  "content": "string",
-  "userId": "number"
+ "title": "String",
+  "content": "String",
+  "userId": "Long"
 }
 ```
 응답:
@@ -80,9 +80,9 @@ URL: POST /api/schedules
 ```json
 {
   "id": "id",
-  "title": "string",
-  "content": "string",
-  "userId": "number",
+  "title": "String",
+  "content": "String",
+  "userId": "Long",
   "createdData": "yyyy-MM-dd'T'HH:mm:ss",
   "modifiedDate": "yyyy-MM-dd'T'HH:mm:ss"
 }
@@ -95,7 +95,7 @@ URL: POST /api/schedules
 ```
 4. 일정 조회
 
-URL: GET /api/schedules/{id}
+URL: GET /schedules/{id}
 
 설명: 특정 일정의 세부 정보를 조회합니다.
 
@@ -105,9 +105,9 @@ URL: GET /api/schedules/{id}
 ```json
 {
   "id": "id",
-  "title": "string",
-  "content": "string",
-  "userId": "number",
+  "title": "String",
+  "content": "String",
+  "userId": "Long",
   "createdData": "yyyy-MM-dd'T'HH:mm:ss",
   "modifiedDate": "yyyy-MM-dd'T'HH:mm:ss"
 }
@@ -120,7 +120,7 @@ URL: GET /api/schedules/{id}
 ```
 5. 일정 수정
 
-URL: PUT /api/schedules/{id}
+URL: PUT /schedules/{id}
 
 설명: 특정 일정의 내용을 수정합니다.
 
@@ -137,9 +137,9 @@ URL: PUT /api/schedules/{id}
 ```json
 {
   "id": "id",
-  "title": "string",
-  "content": "string",
-  "userId": "number",
+  "title": "String",
+  "content": "String",
+  "userId": "Long",
   "createdData": "yyyy-MM-dd'T'HH:mm:ss",
   "modifiedDate": "yyyy-MM-dd'T'HH:mm:ss"
 }
@@ -152,7 +152,7 @@ URL: PUT /api/schedules/{id}
 ```
 6. 일정 삭제
 
-URL: DELETE /api/schedules/{id}
+URL: DELETE /schedules/{id}
 
 설명: 특정 일정을 삭제합니다.
 
